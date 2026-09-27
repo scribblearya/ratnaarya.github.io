@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<title>Ratna Arya | Film • Literature • Stories</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Georgia,serif;
+  background:#f7f4ee;
+  color:#171717;
+  line-height:1.6;
+}
+
+nav{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:22px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:rgba(247,244,238,.94);
+  backdrop-filter:blur(10px);
+  z-index:100;
+  border-bottom:1px solid #ddd8cf;
+}
+
+.logo{
+  font-family:Arial,sans-serif;
+  font-weight:bold;
+  letter-spacing:3px;
+  font-size:18px;
+}
+
+nav a{
+  color:#171717;
+  text-decoration:none;
+  margin-left:25px;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+}
+
+.hero{
+  min-height:100vh;
+  padding:150px 7% 80px;
+  display:flex;
+  align-items:center;
+}
+
+.intro{
+  max-width:1000px;
+}
+
+.label{
+  font-family:Arial,sans-serif;
+  text-transform:uppercase;
+  letter-spacing:4px;
+  font-size:11px;
+  margin-bottom:28px;
+}
+
+.hero h1{
+  font-size:clamp(60px,11vw,145px);
+  line-height:.86;
+  letter-spacing:-7px;
+  font-weight:500;
+}
+
+.hero h1 span{
+  font-style:italic;
+}
+
+.hero-text{
+  max-width:600px;
+  margin-top:45px;
+  font-size:20px;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:30px;
+  padding:14px 25px;
+  border:1px solid #171717;
+  color:#171717;
+  text-decoration:none;
+  font-family:Arial,sans-serif;
+  font-size:13px;
+}
+
+.btn:hover{
+  background:#171717;
+  color:#fff;
+}
+
+section{
+  padding:120px 7%;
+}
+
+.dark{
+  background:#181818;
+  color:#f7f4ee;
+}
+
+.section-title{
+  font-size:clamp(50px,8vw,100px);
+  line-height:.95;
+  font-weight:400;
+  margin-bottom:50px;
+}
+
+.about-text{
+  max-width:850px;
+  font-size:25px;
+}
+
+.work-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:1px;
+  background:#171717;
+  margin-top:70px;
+}
+
+.work-card{
+  background:#f7f4ee;
+  padding:45px;
+  min-height:260px;
+}
+
+.work-number{
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+.work-card h3{
+  font-size:34px;
+  font-weight:400;
+  margin:35px 0 15px;
+}
+
+.work-card p{
+  color:#555;
+}
+
+.project{
+  margin-top:80px;
+  padding:65px;
+  background:#ded7ca;
+}
+
+.project h3{
+  font-size:clamp(45px,7vw,90px);
+  font-weight:400;
+  line-height:1;
+  margin:20px 0;
+}
+
+.project p{
+  max-width:700px;
+  font-size:19px;
+}
+
+.research-list{
+  margin-top:50px;
+  border-top:1px solid #777;
+}
+
+.research-item{
+  padding:25px 0;
+  border-bottom:1px solid #777;
+  display:flex;
+  justify-content:space-between;
+  font-size:22px;
+}
+
+.contact{
+  background:#d7cec0;
+}
+
+.contact h2{
+  font-size:clamp(55px,9vw,110px);
+  font-weight:400;
+  line-height:.9;
+}
+
+.contact p{
+  margin-top:35px;
+  font-size:20px;
+}
+
+.contact a{
+  color:#171717;
+  display:block;
+  margin-top:18px;
+  font-size:20px;
+}
+
+footer{
+  background:#181818;
+  color:#f7f4ee;
+  padding:30px 7%;
+  font-family:Arial,sans-serif;
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+}
+
+@media(max-width:700px){
+
+  nav{
+    padding:18px 5%;
+  }
+
+  nav a{
+    margin-left:10px;
+    font-size:10px;
+  }
+
+  .hero{
+    padding-left:6%;
+    padding-right:6%;
+  }
+
+  .hero h1{
+    letter-spacing:-4px;
+  }
+
+  section{
+    padding:85px 6%;
+  }
+
+  .about-text{
+    font-size:19px;
+  }
+
+  .work-grid{
+    grid-template-columns:1fr;
+  }
+
+  .work-card{
+    padding:32px;
+  }
+
+  .project{
+    padding:35px 25px;
+  }
+
+  .research-item{
+    font-size:17px;
+  }
+
+  footer{
+    display:block;
+  }
+}
+</style>
+</head>
+
+
+<body>
+
+<nav>
+  <div class="logo">RATNA ARYA</div>
+
+  <div>
+    <a href="#about">ABOUT</a>
+    <a href="#work">WORK</a>
+    <a href="#research">RESEARCH</a>
+    <a href="#contact">CONTACT</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="intro">
+
+    <div class="label">
+      Film • Literature • Culture • Storytelling
+    </div>
+
+    <h1>
+      Stories<br>
+      <span>that</span> travel<br>
+      beyond borders.
+    </h1>
+
+    <p class="hero-text">
+      I am Ratna Arya — a researcher, filmmaker and storyteller
+      exploring the relationship between cinema, literature,
+      culture and human stories.
+    </p>
+
+    <a class="btn" href="#work">
+      EXPLORE MY WORK →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="dark" id="about">
+
+  <div class="label">
+    01 — About
+  </div>
+
+  <h2 class="section-title">
+    A curious mind.<br>
+    A storyteller.
+  </h2>
+
+  <p class="about-text">
+    My work lies at the intersection of Film Studies, Literature,
+    Gender Studies and Cultural Studies. I am interested in stories
+    that reveal people, places and identities — and in the power
+    of storytelling to connect cultures.
+  </p>
+
+</section>
+
+
+<!-- WORK -->
+
+<section id="work">
+
+  <div class="label">
+    02 — Selected Work
+  </div>
+
+  <h2 class="section-title">
+    What I create.
+  </h2>
+
+
+  <div class="work-grid">
+
+    <div class="work-card">
+
+      <div class="work-number">01</div>
+
+      <h3>Film & Documentary</h3>
+
+      <p>
+        Documentary stories about people, places and everyday
+        realities that often remain unseen.
+      </p>
+
+    </div>
+
+
+    <div class="work-card">
+
+      <div class="work-number">02</div>
+
+      <h3>Writing</h3>
+
+      <p>
+        Creative writing, essays and reflections inspired by
+        people, cinema, travel and life.
+      </p>
+
+    </div>
+
+
+    <div class="work-card">
+
+      <div class="work-number">03</div>
+
+      <h3>Storytelling</h3>
+
+      <p>
+        Exploring how stories create emotional connections
+        between people and cultures.
+      </p>
+
+    </div>
+
+
+    <div class="work-card">
+
+      <div class="work-number">04</div>
+
+      <h3>Culture</h3>
+
+      <p>
+        Exploring Indian culture, cinema and storytelling
+        as a bridge between communities and the world.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- FEATURED PROJECT -->
+
+  <div class="project">
+
+    <div class="label">
+      Featured Documentary
+    </div>
+
+    <h3>Ret Ki Basti</h3>
+
+    <p>
+      A documentary project exploring the lives and stories
+      of people living near Sangam, Prayagraj — looking beyond
+      the familiar image of a sacred place and towards the
+      people who call its surroundings home.
+    </p>
+
+    <a class="btn" href="#">
+      VIEW PROJECT →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research" class="dark">
+
+  <div class="label">
+    03 — Research
+  </div>
+
+  <h2 class="section-title">
+    Ideas I explore.
+  </h2>
+
+  <div class="research-list">
+
+    <div class="research-item">
+      <span>Film Studies</span>
+      <span>01</span>
+    </div>
+
+    <divh
